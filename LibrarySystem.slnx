@@ -1,12 +1,12 @@
 <Solution>
-  <Folder Name="/docs/">
-    <File Path="../../../../Desktop/Admin_Dashboard.png" />
-    <File Path="../../../../Desktop/Login.png" />
-    <File Path="../../../../Desktop/Myborrowing.png" />
-  </Folder>
   <Folder Name="/Solution Items/">
     <File Path="DatabaseScript.sql" />
     <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Solution Items/docs/">
+    <File Path="../../../../Desktop/dashboard.png" />
+    <File Path="../../../../Desktop/Login.png" />
+    <File Path="../../../../Desktop/myborrowings.png" />
   </Folder>
   <Project Path="LibrarySystem.BLL/LibrarySystem.BLL.csproj" />
   <Project Path="LibrarySystem.Core/LibrarySystem.Core.csproj" />

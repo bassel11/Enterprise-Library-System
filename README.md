@@ -37,13 +37,13 @@ The solution is divided into highly decoupled layers adhering strictly to the **
 
 ## ✨ UI Highlights
 
-![Login Page](docs/Login.png)
+![Login Page](docs/login.png)
 *Login & Register Page.*
 
-![Admin Dashboard](docs/Admin_Dashboard.png)
+![Admin Dashboard](docs/dashboard.png)
 *Admin Dashboard featuring real-time statistics and management.*
 
-![User Borrowing History](docs/Myborrowing.png)
+![User Borrowing History](docs/myborrowings.png)
 *User view displaying borrowing history with dynamic overdue tracking.*
 
 ---
