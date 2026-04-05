@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="DatabaseScript.sql" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="LibrarySystem.BLL/LibrarySystem.BLL.csproj" />
+  <Project Path="LibrarySystem.Core/LibrarySystem.Core.csproj" />
+  <Project Path="LibrarySystem.DAL/LibrarySystem.DAL.csproj" />
+  <Project Path="LibrarySystem.Tests/LibrarySystem.Tests.csproj" Id="f5be8853-b6f0-45fe-b363-c3389aa90682" />
+  <Project Path="LibrarySystem.UI/LibrarySystem.UI.csproj" />
+</Solution>

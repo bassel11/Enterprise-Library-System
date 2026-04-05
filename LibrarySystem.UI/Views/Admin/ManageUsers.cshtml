@@ -1,0 +1,92 @@
+﻿@model IEnumerable<LibrarySystem.Core.Entities.User>
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold"><i class="bi bi-people text-primary me-2"></i> Manage Users</h2>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show border-0 border-start border-5 border-success shadow-sm" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i> @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show border-0 border-start border-5 border-danger shadow-sm" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="bg-light text-secondary">
+                        <tr>
+                            <th class="ps-4 py-3">Username</th>
+                            <th class="py-3">Role</th>
+                            <th class="py-3">Joined Date</th>
+                            <th class="py-3">Status</th>
+                            <th class="text-end pe-4 py-3">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="border-top-0">
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">@user.Username</td>
+                                <td><span class="badge bg-secondary">@user.Role</span></td>
+                                <td>@user.CreatedAt.ToString("MMM dd, yyyy")</td>
+                                <td>
+                                    @if (user.IsActive)
+                                    {
+                                        <span class="badge bg-success bg-opacity-10 text-success border border-success"><i class="bi bi-person-check me-1"></i> Active</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger bg-opacity-10 text-danger border border-danger"><i class="bi bi-person-x me-1"></i> Deactivated</span>
+                                    }
+                                </td>
+                                <td class="text-end pe-4">
+                                    <form asp-controller="Admin" asp-action="ToggleUserStatus" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to change this user\'s status?');">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="userId" value="@user.UserId" />
+                                        <input type="hidden" name="isActive" value="@(user.IsActive ? "false" : "true")" />
+
+                                        @if (user.IsActive)
+                                        {
+                                            <button type="submit" class="btn btn-sm btn-outline-danger rounded-pill px-3 transition">
+                                                <i class="bi bi-ban"></i> Deactivate
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button type="submit" class="btn btn-sm btn-outline-success rounded-pill px-3 transition">
+                                                <i class="bi bi-check-circle"></i> Activate
+                                            </button>
+                                        }
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                        @if (!Model.Any())
+                        {
+                            <tr>
+                                <td colspan="5" class="text-center py-5 text-muted">
+                                    <i class="bi bi-people fs-1 d-block mb-2"></i>
+                                    No users found in the system.
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

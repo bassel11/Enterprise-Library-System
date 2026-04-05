@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>daaad6ec-da04-4f2c-aa3f-7970edfa94c6</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibrarySystem.BLL\LibrarySystem.BLL.csproj" />
+    <ProjectReference Include="..\LibrarySystem.Core\LibrarySystem.Core.csproj" />
+    <ProjectReference Include="..\LibrarySystem.DAL\LibrarySystem.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
