@@ -37,15 +37,12 @@ The solution is divided into highly decoupled layers adhering strictly to the **
 
 ## ✨ UI Highlights
 
-![Login Page](docs/login.png)
 *Login & Register Page.*
 <img width="1918" height="841" alt="Login" src="https://github.com/user-attachments/assets/e61980f4-3a7a-40a5-a10e-4849d505a4c3" />
 
-![Admin Dashboard](docs/dashboard.png)
 *Admin Dashboard featuring real-time statistics and management.*
 <img width="1907" height="856" alt="dashboard" src="https://github.com/user-attachments/assets/52f09534-c1d1-4a5f-9aeb-43377aeb947c" />
 
-![User Borrowing History](docs/myborrowings.png)
 *User view displaying borrowing history with dynamic overdue tracking.*
 <img width="1917" height="847" alt="myborrowings" src="https://github.com/user-attachments/assets/25f6566b-d5ce-43cd-be02-4dee2695bb0f" />
 
