@@ -35,6 +35,19 @@ The solution is divided into highly decoupled layers adhering strictly to the **
 
 ---
 
+## ✨ UI Highlights
+
+![Login Page](docs/Login.png)
+*Login & Register Page.*
+
+![Admin Dashboard](docs/Admin_Dashboard.png)
+*Admin Dashboard featuring real-time statistics and management.*
+
+![User Borrowing History](docs/Myborrowing.png)
+*User view displaying borrowing history with dynamic overdue tracking.*
+
+---
+
 ## 🚀 Key Enterprise Features
 
 * **Atomic Concurrency Control:** Prevents Race Conditions during high-traffic borrowing requests using atomic SQL transactions and Optimistic Row Locking without impacting system performance.
